@@ -38,6 +38,9 @@ function Login(){
                 if(err.code === 'auth/wrong-password'){
                     setMgsError('Password incorrect');
                 }
+                if(err.code === 'auth/user-disabled'){
+                    setMgsError('Usuario deshabilitado');
+                }
             })
     }
     return(
